@@ -1,0 +1,22 @@
+body {
+}
+
+.neeraluLogo{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.neeraluRoundedCornerImage{
+    border-radius: 6px;  
+}
+
+.neeraluBorderDiv{
+    border: 1px solid;
+    bordercolor: #01AEF0;
+    border-radius:6px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
