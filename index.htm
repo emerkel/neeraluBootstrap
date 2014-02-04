@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html ng-app lang="en">
 <head>
     <meta charset="utf-8" />
     <title></title>
@@ -8,64 +8,20 @@
     <link href="css/bootstrap.css" rel="stylesheet">
 
     <link href="css/neeralu.css" rel="stylesheet">
+    <script src="js/neeralu.js">
+    </script>
 
 </head>
-    <body>
+    <body onload="getFirebaseData()">
     <div class="container">
-        <div class="neeraluLogo" >
-            <img src="images/neeraluSolutionsLogoSmallerStill.jpg" height="145" width="450" alt="logo"/>
-            <div class="lead">
-                <span style="white-space: nowrap;">
-                <span style="font-family:Century Gothic Bold,sans-serif;color:rgb(1,174,240)">
-                data
-                </span>
-                <span style="font-family:Century Gothic Bold;color:rgb(255,200,11)">
-                ►
-                </span>
-                <span style="font-family:Century Gothic Bold,sans-serif;color:rgb(1,174,240)">
-                information
-                </span>
-                <span style="font-family:Century Gothic Bold;color:rgb(255,200,11)">
-                ►
-                </span>
-                <span style="font-family:Century Gothic Bold,sans-serif;color:rgb(1,174,240)">
-                decisions
-                </span>
-                </span>
-            </div>
-        </div>
+        <ng-include src="'header.html'">
+        </ng-include>
         <!-- Tab navigation bar -->
         <div class="bs-example bs-example-tabs pull-left tabbable">
-            <ul id="myTab" class="nav nav-tabs">
-                <li class="active">
-                    <a href="#home" data-toggle="tab">home</a>
-                </li>
-                <li class="dropdown">
-                    <a href="#" id="ddServices" class="dropdown-toggle"
-                    data-toggle="dropdown">services <b class="caret"></b></a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="ddServices">
-                        <li>
-                            <a href="#dropdown1" tabindex="-1" data-toggle="tab">data management</a>
-                        </li>
-                        <li>
-                            <a href="#dropdown2" tabindex="-1" data-toggle="tab">cloud migration/integration</a>
-                        </li>
-                        <li>
-                            <a href="#dropdown3" tabindex="-1" data-toggle="tab">custom development</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#about" data-toggle="tab">about</a>
-                </li>
-                <li>
-                    <a href="#toolsandresources" data-toggle="tab">tools and resources</a>
-                </li>
-                <li>
-                    <a href="#contact" data-toggle="tab">contact us</a>
-                </li>
-            </ul>
-            <!-- End Tabs-->
+            <!-- Navigation include via Angular.js -->
+            <ng-include src="'navigation.html'">
+            </ng-include>
+            <!-- End Navigation -->
             <!-- HOME TAB -->
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade in active" id="home">
@@ -122,9 +78,9 @@
                                 </span>
                                 </h2>
                                 <p class="lead">
-                                Everyone talks about data these days; big data - free data - secure data - 
-                                streaming data. Chances are if you are in business you have talked or read 
-                                something about data in the recent past.
+                                Everyone talks about data these days; big data - open data - secure data - 
+                                streaming data. Chances are high that if you are in business you have talked or read 
+                                something about data in the recent past. <span class="text-muted">Maybe even since breakfast.</span>
                                 </p>
                                 <p class="lead">
                                 Data is important, just as oil is important, but data is like oil in another 
@@ -136,7 +92,8 @@
                                 meaningful in decision making.
                                 </p>
                                 <p>
-                                <button class="btn btn-lg btn-primary" id="gotoDataManagement" type="button">We 
+                                <button class="btn btn-lg btn-primary" id="gotoDataManagement" type="button" onclick="showTab('dataManagement')">We
+                                <!--<button class="btn btn-lg btn-primary" id="gotoDataManagement" type="button">We--> 
                                 can help &gt;&gt;</button>
                                 </p>
 
@@ -157,7 +114,7 @@
                             </div>
                         </div>
 
-                        <hr class="featurette-divider">
+                        <!--<hr class="featurette-divider">
 
                         <div class="row featurette">
                             <div class="col-md-5">
@@ -201,7 +158,7 @@
                                 can help &gt;&gt;</button>
                                 </p>
                             </div>
-                        </div>
+                        </div> 
 
                         <hr class="featurette-divider">
 
@@ -223,46 +180,8 @@
                             </div>
                         </div>
 
-                        <hr class="featurette-divider">
+                        <hr class="featurette-divider"> -->
                         <!-- /END THE FEATURETTES -->
-                        <!-- FOOTER -->
-                        <footer>
-                        <div style="display:block;text-align:left">
-                            <div style="display:block;text-align:right">
-                                <h2 style="text-align:left"><font size="3" face="verdana, sans-serif"><b>
-                                <span style="font-family:Century Gothic Bold,sans-serif;color:rgb(1,174,240)">
-                                data
-                                </span>
-                                </b></font><font size="3" face="verdana, sans-serif"><b>
-                                <span style="font-family:Century Gothic Bold,sans-serif;color:rgb(1,174,240)">
-                                <font size="2">
-                                <span style="font-family:Arial;color:rgb(255,200,11);background-color:transparent;font-weight:normal;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline">
-                                ►
-                                </span>
-                                </font> information
-                                </span>
-                                </b></font><font size="3" face="verdana, sans-serif"><b>
-                                <span style="font-family:Century Gothic Bold,sans-serif;color:rgb(1,174,240)">
-                                <font size="2">
-                                <span style="font-family:Arial;color:rgb(255,200,11);background-color:transparent;font-weight:normal;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline">
-                                ►
-                                </span>
-                                </font> decisions
-                                </span>
-                                </b></font></h2>
-                                <div style="text-align:left">
-                                    <span style="color:rgb(1,174,240)">
-                                    <font size="2" face="arial, sans-serif">email: &nbsp;<a href="mailto:contact@neeralu.com">contact@neeralu.com</a></font>
-                                    </span>
-                                </div>
-                                <div style="text-align:left">
-                                    <font color="#01aef0">phone: 405.598.7323</font>
-                                </div>
-                            </div>
-                        </div>
-                        <p>
-                        </p>
-                        </footer>
 
                     </div><!-- /.container -->
                 </div>
@@ -276,6 +195,7 @@
                             <h1>about</h1>
                         </div>
                     </div>
+
                 </div>
                 <!-- /ABOUT -->
                 <!-- CONTACT TAB -->
@@ -293,176 +213,64 @@
                                 </p>
                                 <p>
                                 </p>
-                                <address><strong>neeralu Solutions LLC</strong><br>
-                                (405) 598-7323</address>
+                                <address><strong>neeralu Solutions LLC<br>
+                                <span id=phoneNumberSpan2>
+                                </span>
+                                </strong></address>
                             </div> <!-- end jumbotron -->
-
-                            <form role="form" action="https://docs.google.com/a/neeralu.com/forms/d/1HjM45tda75-d-uCk0OXed_c57tCtMS9MKK3l6OkdH3A/formResponse" method="POST" id="ss-form" target="redirect" onsubmit="submitted=true;">
-                                <!--<form role="form" action="https://docs.google.com/a/neeralu.com/forms/d/1HjM45tda75-d-uCk0OXed_c57tCtMS9MKK3l6OkdH3A/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">-->
-                                <div class="form-group">
-                                    <ol style="padding-left: 10px; padding-right:10px">
-                                        <div class="form-group has-error">
-                                            <label class="col-sm-2 control-label" for="entry_299974783">
-                                            Your name
-                                            </label>
-                                            <input class="form-control" type="text" name="entry.299974783" value="" class="ss-q-short" id="entry_299974783" dir="auto" required="" title="" placeholder="required field">
-                                        </div>
-
-                                        <div class="form-group has-error">
-                                            <label class="col-sm-4 control-label" for="entry_199842414">
-
-                                            email address
-
-                                            </label>
-                                            <input class="form-control" type="email" name="entry.199842414" value="" class="ss-q-short" id="entry_199842414" dir="auto" required="" title="Must be a valid email address" placeholder="required field">
-
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="col-sm-4 control-label" for="entry_22304300">
-
-                                            Your phone number
-                                            </label>
-                                            <input class="form-control" type="text" name="entry.22304300" value="" class="ss-q-short" id="entry_22304300" dir="auto" title="" placeholder="optional">
-
-                                        </div>
-
-                                        <div class="form-group has-error">
-                                            <label class="col-sm-2 control-label" for="entry_82558078">
-
-                                            Company
-
-                                            </label>
-                                            <input class="form-control" type="text" name="entry.82558078" value="" class="ss-q-short" id="entry_82558078" dir="auto" required="" title="" placeholder="required field">
-
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-6 control-label" for="entry_1597833684">
-
-                                            How did you hear about neeralu Solutions?
-
-                                            </label>
-                                            <select  class="form-control" name="entry.1597833684" id="entry_1597833684">
-                                                <option value=""></option> <option value="Article link">Article link</option> <option value="Blog posting">Blog 
-                                                posting</option> <option value="Clicked on an add">Clicked on an add</option> <option value="Google Search">Google 
-                                                Search</option> <option value="Word of mouth">Word of mouth</option> <option value="Other">Other</option>
-                                            </select>
-                                            <span class="help-block">
-                                            Please make a selection here, we appreciate knowing how people found us.
-                                            </span>
-                                        </div>
-                                        <div class="form-group">
-
-                                            <label class="col-sm-6 control-label" for="entry_1597833684">
-                                            How you would prefer to be contacted.
-                                            </label>
-                                            <br>
-
-
-                                            <div class="radio">
-                                                <label>
-                                                <input type="radio" name="entry.1822025521" value="Phone" id="group_1822025521_1" role="radio">
-                                                I prefer to be contacted by phone.
-                                                </label>
-                                            </div>
-                                            <div class="radio">
-                                                <label>
-                                                <input type="radio" name="entry.1822025521" value="Email" id="group_1822025521_2" role="radio" checked>
-                                                I prefer to be contacted by email.
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-4 control-label" for="entry_1873932088">
-
-                                            How can we help?
-
-                                            </label>
-                                            <textarea class="form-control" name="entry.1873932088" rows="8" cols="0" id="entry_1873932088" dir="auto" ></textarea>
-
-                                        </div>
-
-                                        <input type="hidden" name="draftResponse" value="[,,&quot;3426856446943045363&quot;]">
-                                        <input type="hidden" name="pageHistory" value="0">
-                                        <input type="hidden" name="fromEmail" value="false">
-
-                                        <input type="hidden" name="fbzx" value="3426856446943045363">
-
-                                        <div class="ss-item ss-navigate">
-                                            <table id="navigation-table">
-                                                <tbody>
-                                                <tr>
-                                                    <td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
-                                                        <input type="submit" name="submit" value="Submit" id="ss-submit" class="btn btn-default btn-large">
-                                                    </td>
-
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </ol>
-                                </div>
-                            </form>
+                            <!-- CONTACT FORM include via Angular.js -->
+                            <ng-include src="'contact_form.html'">
+                            </ng-include>
                         </div>
-                        <footer>
-                        <div style="display:block;text-align:left">
-                            <div style="display:block;text-align:right">
-                                <h2 style="text-align:left"><font size="3" face="verdana, sans-serif"><b>
-                                <span style="font-family:Century Gothic Bold,sans-serif;color:rgb(1,174,240)">
-                                data
-                                </span>
-                                </b></font><font size="3" face="verdana, sans-serif"><b>
-                                <span style="font-family:Century Gothic Bold,sans-serif;color:rgb(1,174,240)">
-                                <font size="2">
-                                <span style="font-family:Arial;color:rgb(255,200,11);background-color:transparent;font-weight:normal;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline">
-                                ►
-                                </span>
-                                </font> information
-                                </span>
-                                </b></font><font size="3" face="verdana, sans-serif"><b>
-                                <span style="font-family:Century Gothic Bold,sans-serif;color:rgb(1,174,240)">
-                                <font size="2">
-                                <span style="font-family:Arial;color:rgb(255,200,11);background-color:transparent;font-weight:normal;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline">
-                                ►
-                                </span>
-                                </font> decisions
-                                </span>
-                                </b></font></h2>
-                                <div style="text-align:left">
-                                    <span style="color:rgb(1,174,240)">
-                                    <font size="2" face="arial, sans-serif">email: &nbsp;<a href="mailto:contact@neeralu.com">contact@neeralu.com</a></font>
-                                    </span>
-                                </div>
-                                <div style="text-align:left">
-                                    <font color="#01aef0">phone: 405.598.7323</font>
-                                </div>
-                            </div>
-                        </div>
-                        </footer>
                         <!-- end form -->
                     </div>
                 </div>
                 <!-- /CONTACT TAB -->
                 <!-- DATA MANAGEMENT TAB -->
                 <div class="tab-pane fade" id="dropdown1">
-                    <span class="text-muted">
+                	<div class="container">
+                	<p></p>
+                    <div class="jumbotron">
                     <h1>data management</h1>
-
-                    </span>
-                    <p>
-                    Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's 
-                    organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag 
-                    gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy 
-                    salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify 
-                    squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles 
-                    pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you 
-                    probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork 
-                    sustainable tofu synth chambray yr.
+                  	</div>
+                  	<img class="img-default" src="images/keydata.jpg" alt="key data is key" style="float:right" />
+                    <p class="lead">
+                    Our focus is helping companies unlock the value of their
+                    data. We do this by ensuring the systems they have in place
+                    support high data <em>quality</em>, proper data <em>management</em>, and
+                    master data <em>consistency</em>. 
                     </p>
+                    <p class="lead">
+                    We help companies design and build
+                    an environment which allows them to turn their existing data
+                    into meaningful information which supports good business decisions.
+                    We help customers mature existing data interfaces,
+                    repositories and systems. Areas of focus are those impacting
+                    data quality, data management, integration, reporting and
+                    messaging. The end goal is a more flexible and robust data
+                    and information landscape. 
+                    </p>
+                    <!--<p class="lead">
+                    Our customers are IT departments
+                    of mid to larger sized growing companies. Typically they may
+                    have used a "best of breed" approach to the software they
+                    have purchased. Having grown over time it may be that the
+                    business vision has changed and their systems are more
+                    aligned to the old vision, resulting in finding that
+                    supporting the new direction is harder than it should be.
+                    Our customers know they have a problem and they understand
+                    the value of a fresh set of eyes, unencumbered by history,
+                    politics or ego.
+					</p>-->
+					<p class="lead">
+					We are experienced in helping our customers move along a well defined path, from whatever state they are in originally to a higher performing 
+					data and integration environment which allows data to be turned into information useful in solving business problems. 
+                    </p>
+				</div>
                 </div>
                 <!-- /DATA MANAGEMENT TAB -->
                 <!-- CLOUD MIGRATION_INTEGRATION TAB-->
-                <div class="tab-pane fade" id="dropdown2">
+                <!-- <div class="tab-pane fade" id="dropdown2">
                     <span class="text-muted">
                     <h1>cloud migration</h1>
 
@@ -476,17 +284,20 @@
                     readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, 
                     sartorial keffiyeh echo park vegan.
                     </p>
-                </div>
+
+                </div> -->
                 <!-- /CLOUD MIGRATION_INTEGRATION TAB-->
                 <!-- CUSTOM DEVELOPMENT TAB -->
                 <div class="tab-pane fade" id="dropdown3">
-                    <span class="text-muted">
+                    <div class="container"><p></p>
+                    <div class="jumbotron">
                     <h1>custom development</h1>
-
-                    </span>
-                    <p>
-                    yes we develop stuff too.
+                  	</div>
+                    <p class="lead">
+                    yes we develop stuff and manage projects too.
                     </p>
+</div>
+
                 </div>
                 <!-- /CUSTOM DEVELOPMENT TAB -->
                 <!-- TOOLS AND RESOURCES TAB -->
@@ -498,22 +309,32 @@
                             <h1>tools and resources</h1>
                         </div>
                     </div>
+
+
                 </div>
                 <!-- /TOOLS AND RESOURCES TAB -->
             </div>
+            <!-- FOOTER include via Angular.js -->
+            <ng-include src="'footer.html'">
+            </ng-include>
         </div><!-- /example -->
-        <!-- FOOTER -->
     </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js">
+
+    </script>
+    <script src="http://code.angularjs.org/1.2.10/angular.min.js">
+
+    </script>
+    <script src="http://code.angularjs.org/1.2.10/angular-animate.min.js">
+    </script>
+    <script src="https://cdn.firebase.com/v0/firebase.js">
     </script>
     <script src="js/bootstrap.min.js">
     </script>
     <script src="js/holder.js">
-    </script>
-    <script src="js/neeralu.js">
     </script>
     </body>
 </html>
