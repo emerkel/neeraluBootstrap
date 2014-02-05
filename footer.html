@@ -30,8 +30,7 @@
             email: &nbsp;<a href="mailto:&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#64;&#110;&#101;&#101;&#114;&#97;&#108;&#117;&#46;&#99;&#111;&#109;">&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#64;&#110;&#101;&#101;&#114;&#97;&#108;&#117;&#46;&#99;&#111;&#109;</a>
             </span>
             <br>
-            <span id='phoneNumberSpan' style="color:rgb(1,174,240)">
-            phone:
+            <span class="phoneNumberDisplay" style="color:rgb(1,174,240)">
             </span>
         </div>
         </font>
@@ -40,3 +39,12 @@
 <p>
 </p>
 </footer>
+<script>
+	jQuery.noConflict();
+	
+    jQuery( window ).load(function() {
+        console.log( "window loaded from footer" );
+        //displayPhoneNumber(neeraluPhoneNumber);
+        jQuery("span.phoneNumber").html("phone: " + neeraluPhoneNumber);
+    });
+</script>

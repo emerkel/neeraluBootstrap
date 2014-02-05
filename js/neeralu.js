@@ -1,34 +1,58 @@
+var neeraluPhoneNumber = '405-359-9640';
 
 
-/*
-These methods just show the appropriate div and selects the tab when the user clicks the button--just as if they had clicked the tab instead.
-*/
-//$('#gotoDataManagement').on('click', function() {
-//    $('#myTab a[href="#dropdown1"]').tab('show')
-//});
-
-//$('#gotoCloudMigration').on('click', function() {
-//    $('#myTab a[href="#dropdown2"]').tab('show')
-//});
-
-function getFirebaseData(){
-    var dataRef = new Firebase('https://neeralusite.firebaseio.com/PhoneNumber');
-    dataRef.once('value', function(snapshot) {
-      var phoneNum = snapshot.val();
-      //alert('phone number is ' + phoneNum);
-      displayPhoneNumber(phoneNum);
-    });
+var getFirebaseData = function (){
+	// if we have not already gotten the data for today, we will get it and store it
+	// in the local storage
+	var q = new Date();
+	var m = q.getMonth() + 1;
+	var d = q.getDay();
+	var y = q.getYear();
+	var goFetch = false;
+	
+	if (typeof(Storage) !== "undefined")
+	{
+		var today = new Date(y, m, d);
+		var firebaseDate = localStorage.getItem('firebaseDate');
+		var fbPhoneNumber = localStorage.getItem('fbPhoneNumber');
+		
+		if (firebaseDate != null)
+		{
+			if (firebaseDate != today)
+			{
+				// get the phone 
+				goFetch = true;
+			}
+		} else {
+			// get the phone number
+			goFetch = true;
+		}
+		
+		if (goFetch)
+		{
+		    var dataRef = new Firebase('https://neeralusite.firebaseio.com/PhoneNumber');
+		    dataRef.once('value', function(snapshot) {
+		      var phoneNum = snapshot.val();
+		      //alert('phone number is ' + phoneNum);
+		      fbPhoneNumber = phoneNum;
+		      localStorage.setItem('fbPhoneNumber', fbPhoneNumber);
+		      localStorage.setItem('firebaseDate', today);
+		    });
+		}
+	}
+	else
+	{
+		fbPhoneNumber = neeraluPhoneNumber;
+	}
+	
+	return fbPhoneNumber;
 }
 
-function displayPhoneNumber(phoneNumber ){
-    document.getElementById('phoneNumberSpan').innerHTML = 'phone: ' + phoneNumber;
-    document.getElementById( 'phoneNumberSpan2').innerHTML = 'phone: ' + phoneNumber;
-}
-
-function showTab(tabName){
+var showTab = function(tabName){
+	
 	switch(tabName){
 		case 'dataManagement':
-			$('#myTab a[href="#dropdown1"]').tab('show')
+			jQuery('#myTab a[href="#dropdown1"]').tab('show')
 			break;
 		default:
 	}
