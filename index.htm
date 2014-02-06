@@ -16,13 +16,11 @@
     	jQuery.noConflict();
 		
 	    jQuery( document ).ready(function() {
-	        //console.log( "document loaded" );
-	        neeraluPhoneNumber = getFirebaseData();
+	        
 	    });
 	 
-	    jQuery( window ).load(function() {
-	        //console.log( "window loaded" );
-	        jQuery("span.phoneNumberDisplay").html("phone: " + neeraluPhoneNumber);
+	    jQuery( window ).load(function() {	        
+		    jQuery("span.phoneNumberDisplay").html("phone: " + neeraluPhoneNumber);
 	    });
 	    
     </script>
@@ -101,9 +99,9 @@
                                 </p>
                                 <p class="lead">
                                 Data is important, just as oil is important, but data is like oil in another 
-                                very important way. Data by itself is
+                                very important way. Data by itself is of 
                                 <span class="text-muted">
-                                <em>of very little value.</em>
+                                <em>very little value.</em>
                                 </span>
                                 Like oil, it must be refined and processed to become a resource for business and 
                                 meaningful in decision making.
