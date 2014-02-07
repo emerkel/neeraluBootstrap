@@ -1,5 +1,12 @@
 var neeraluPhoneNumber = "&#52;&#48;&#53;&#45;&#53;&#57;&#56;&#45;&#55;&#51;&#50;&#51;";
 
+/**********************************************************
+*
+*
+* Eddie Merkel - neeralu Solutions - eddie.merkel@neeralu.com
+* 405.598.7323
+***********************************************************/
+
 //var getTodaysDate = function(){
 //	
 //	var q = new Date();
