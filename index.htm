@@ -4,6 +4,12 @@
 <html ng-app lang="en">
 <head>
     <meta charset="utf-8" />
+    <!--
+    TODO Clean these keywords and description up so they match what you want to say and how you want to show up
+    
+    <meta id="MetaDescription" name="DESCRIPTION" content="Oklahoma City IT Company providing IT services and IT consulting including sales and service of software, servers, network and IT solutions in Oklahoma." />
+	<meta id="MetaKeywords" name="KEYWORDS" content="Oklahoma IT services it company it companies network system i software IT solutions IT Consulting servers programming IT assessment IT consultants it optimization application development systems storage managed information management server consolidation support networking data backup managed services database Oklahoma City" />
+	-->
     <title>neeralu Solutions</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -17,7 +23,7 @@
     	jQuery.noConflict();
 		
 	    jQuery( document ).ready(function() {
-	        
+	        window.scrollTo(0, 0);
 	    });
 	 
 	    jQuery( window ).load(function() {	        
@@ -36,8 +42,8 @@
             <ng-include src="'navigation.html'">
             </ng-include>
             <!-- End Navigation -->
-            <!-- HOME TAB -->
             <div id="myTabContent" class="tab-content">
+            	<!-- HOME TAB -->
                 <div class="tab-pane fade in active" id="home">
                     <p>
                     </p>
@@ -105,11 +111,7 @@
                                 Like oil, it must be refined and processed to become a resource for business and 
                                 meaningful in decision making.
                                 </p>
-                                <p>
-                                <button class="btn btn-lg btn-primary" id="gotoDataManagement" type="button" onclick="showTab('dataManagement')">We
-                                <!--<button class="btn btn-lg btn-primary" id="gotoDataManagement" type="button">We-->
-                                can help &gt;&gt;</button>
-                                </p>
+                                
 
                             </div>
                             <div class="col-md-5">
@@ -200,17 +202,225 @@
                     </div><!-- /.container -->
                 </div>
                 <!-- /HOME TAB -->
+                <!-- SERVICES TAB -->
+                <div class="tab-pane fade" id="services">
+					<div class="container">
+						<p>
+						</p>
+						<div class="jumbotron">
+							<h1>services</h1>
+						</div>
+						<div class="panel-group" id="services_accordion">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#services_accordion" href="#datamanagement">
+											data integration and management
+										</a>
+									</h4>
+								</div>
+								<div id="datamanagement" class="panel-collapse collapse">
+									<div class="panel-body">
+										<img class="img-default" src="images/keydata.jpg" alt="key data is key" style="float:right" />
+					                    <p>
+					                    Our focus is helping companies unlock the value of their
+					                    data. We do this by ensuring the systems they have in place
+					                    support high data <em>quality</em>, proper data <em>management</em>, and
+					                    master data <em>consistency</em>. 
+					                    </p>
+					                    <p>
+					                    We help companies design and build
+					                    an environment which allows them to turn their existing data
+					                    into meaningful information which supports good business decisions.
+					                    We help customers mature existing data interfaces,
+					                    repositories and systems. Areas of focus are those impacting
+					                    data quality, data management, integration, reporting and
+					                    messaging. The end goal is a more flexible and robust data
+					                    and information landscape. 
+					                    </p>
+					                    <!--<p>
+					                    Our customers are IT departments
+					                    of mid to larger sized growing companies. Typically they may
+					                    have used a "best of breed" approach to the software they
+					                    have purchased. Having grown over time it may be that the
+					                    business vision has changed and their systems are more
+					                    aligned to the old vision, resulting in finding that
+					                    supporting the new direction is harder than it should be.
+					                    Our customers know they have a problem and they understand
+					                    the value of a fresh set of eyes, unencumbered by history,
+					                    politics or ego.
+										</p>-->
+										<p>
+										We are experienced in helping our customers move along a well defined path, from whatever state they are in originally to a higher performing 
+										data and integration environment which allows data to be turned into information useful in solving business problems. 
+					                    </p>
+					                </div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#services_accordion" href="#custom_development">
+											custom development
+										</a>
+									</h4>
+								</div>
+								<div id="custom_development" class="panel-collapse collapse">
+									<div class="panel-body">
+										<img class="img-rounded neeraluLogo" src="images/code.jpg" alt="yes we write code too" style="float:left"/>
+										<p>Unless you are starting from ground zero or implementing an ERP system completely out of the box there can be a considerable amount of development
+											that must be done to get some systems to play nicely with each other.</p>
+										<p>Additionally, when projects like this get started it isn't like everything else that needs to be done just sits and waits. For a successful project and successful 
+											implementation the impact to the business must be reduced as much as possible.</p>
+										<p>Prior to moving into IT management Eddie had a successful career as a developer; working in domains as diverse as auto insurance and
+										online document management.</p>
+										<p>Past accomplishments include T-SQL Edit Pro, a code editor for SQL Server that included intellisense much like the
+										Microsoft Integrated Development Environments of the time. This tool was widely accepted and sold over the internet for some time.</p>
+										<p>Outside of work Eddie loves spending time with his wife, getting together with friends and family, travelling, music, movies, reading, writing and fly fishing.</p>
+				
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#services_accordion" href="#cloud">
+											cloud
+										</a>
+									</h4>
+								</div>
+								<div id="cloud" class="panel-collapse collapse">
+									<div class="panel-body">
+										<img class="img-responsive neeraluLogo" src="images/cloud.jpg" alt="cloud is on the horizon" style="float:left">
+										<p>Cloud isn't the coming thing, <em>it's already here</em>.</p>
+		                                <p>
+		                                Software as a Service (SAAS), Platform as a Service (PAAS) and Infrastructure as 
+		                                a Service (IAAS) are each already changing computing, data storage and 
+		                                application development in large and small ways. Chances are in the next few 
+		                                years your business will be utilizing some element of the cloud on a daily basis...that 
+		                                is if you are not already.
+		                                </p>
+		                                <p>
+		                                This can lead to a host of questions.
+		                                </p>
+		                                <p>
+		                                If you are starting from scratch in the cloud with a particular system or 
+		                                application you might think you are good to go. But what about when you aren't 
+		                                starting from scratch? What if you want to move applications and data that have 
+		                                always resided inside your domain out into the cloud? What about integrating 
+		                                data between applications that reside in the cloud and those that remain on 
+		                                premises?
+		                                </p>
+		                                <p>
+		                                It's a lot of questions, <em>and you don't want to get it wrong</em>.
+		                                </p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+                <!-- /SERVICES TAB -->
                 <!-- ABOUT -->
-                <div class="tab-pane fade" id="about">
-                    <div class="container">
-                        <p>
-                        </p>
-                        <div class="jumbotron">
-                            <h1>about</h1>
-                        </div>
-                    </div>
-
-                </div>
+				<div class="tab-pane fade" id="about">
+					<div class="container">
+						<p>
+						</p>
+						<div class="jumbotron">
+							<h1>about</h1>
+						</div>
+						<div class="panel-group" id="accordion">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+											our philosophy
+										</a>
+									</h4>
+								</div>
+								<div id="collapseOne" class="panel-collapse collapse in">
+									<div class="panel-body">
+										<img class="img-rounded" src="images/share.jpg" alt="communication is key" width="400" height="267" style="float:right"/>
+										<p>
+											The point of any serious IT project is a <em>successful</em> implementation. It is our experience that the challenge to successful implementation is not technology. Rather it is
+											related to insufficient or improper communications coupled with people's natural resistance to change.
+											Given this belief, it should come as no surprise that we do <em>not</em> believe that success means conforming your process to some "recipe" from a book.
+											One size does <em>not</em> fit all.
+										</p>
+										<p>
+											Instead we first work to listen and understand. Where does it hurt and how? From there we work to get the lay of the land, concentrating first on the process and how people engage during the process.
+											Once we understand and are in sync with you and your team, <em>then</em> we can work with you and your team to design the most efficient way to accomplish your goals while leveraging your existing
+											investment in technology and infrastructure. Part of that design will be suggestions based on our experience and our listening for a communication plan designed to help the implementation succeed.
+										</p>
+										<p>
+											At neeralu Solutions, we believe business processes are the merging of process and people-related concepts that evolve with continuous improvement.
+											Our methodical approach shows our commitment to good process and successful results, while recognizing the demands of a successful business.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+											neeralu Who?
+										</a>
+									</h4>
+								</div>
+								<div id="collapseTwo" class="panel-collapse collapse">
+									<div class="panel-body">
+										<img class="img-rounded neeraluLogo" src="images/profilepic.jpg" height="33%" width="33%" alt="Eddie Merkel" padding="10px" style="float:left"/>
+										<p>Before starting neeralu Solutions, Eddie Merkel was an IT development leader and enterprise change agent
+										for a Fortune 500 energy exploration and production company.</p>
+										<p>In this position Eddie led development teams focused primarily on the Finance and Accounting side of the business as well
+											as participating and later being chosen to lead the first architectural efforts attempted at the company.
+											It was in this role over the last three or four years with the company that Eddie became convinced of the value of good integration practices,
+										that the need was widespread, and that the biggest challenges to successful implementation were not of a technical nature.</p>
+										<p>Prior to moving into IT management Eddie had a successful career as a developer; working in domains as diverse as auto insurance and
+										online document management.</p>
+										<p>Past accomplishments include T-SQL Edit Pro, a code editor for SQL Server that included intellisense much like the
+										Microsoft Integrated Development Environments of the time. Another tool was <em>importantbits.com</em>; an online personal data repository. Both tools enjoyed good adoption and
+										were widely used until they were each retired because the <strong>big guys</strong> finally caught up with the functionality they offered.</p>
+										<p>Outside of work Eddie loves spending time with his wife, getting together with friends and family, travelling, music, movies, reading, writing and fly fishing.</p>
+				
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+											neeralu? What is that all about?
+										</a>
+									</h4>
+								</div>
+								<div id="collapseThree" class="panel-collapse collapse">
+									<div class="panel-body">
+										<p><strong>First, pronunciation. It's...</strong></p>
+										<p></p>
+										<ul>
+											<li>nee like the <a href="http://youtu.be/QTQfGd3G6dg" target="_blank">Knights who say "Ni"</a> from the Monty Python skit</li>
+											<li>Ra like the <a href="http://en.wikipedia.org/wiki/Ra" target="_blank">Egyptian Sun God</a></li>
+											<li>lu, like the song <a href="http://en.wikipedia.org/wiki/Skip_to_My_Lou" target="_blank">"skip to my<i> lou</i>"</a> or <a href="http://en.wikipedia.org/wiki/Lou_Reed" target="_blank"><i>Lou </i>Reed</a> though not as cool on that second one</li>
+										</ul>
+										<p><b>Second, <i>why </i>neeralu?</b></p>
+										<p>Some time ago someone looking at Eddie Merkel's resume, experience and past history of work gave him the label of "<em>solution pioneer.</em>"
+										</p>
+										<p>Eddie really liked that because it fit so well. From the beginning he was recognized by others as someone gifted in figuring out how to get things done, 
+											some of which hadn't been done before. As his career progressed he advanced to being one tasked to
+											 help figure out, not how to invent or reinvent the wheel, but how to implement wheels that already existed. Taking work that others had done which had been proven out 
+											 and then working to figure out what parts of that made sense given the situation we were facing at the time. <br>
+										</p>
+										<p>So if you drop "solution pioneer" into some of the domain name generators on the internet, one of the words it spits out when it is done is "neeralu." 
+											This seemed good because it didn't sound too <i>techy</i>. Eddie knew what type of consulting business he wanted to do but didn't want the business name to
+											be too restrictive, so <b>neeralu Solutions</b> it was.<br>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
                 <!-- /ABOUT -->
                 <!-- CONTACT TAB -->
                 <div class="tab-pane fade" id="contact">
@@ -240,49 +450,6 @@
                     </div>
                 </div>
                 <!-- /CONTACT TAB -->
-                <!-- DATA MANAGEMENT TAB -->
-                <div class="tab-pane fade" id="dropdown1">
-                	<div class="container">
-                	<p></p>
-                    <div class="jumbotron">
-                    <h1>data management</h1>
-                  	</div>
-                  	<img class="img-default" src="images/keydata.jpg" alt="key data is key" style="float:right" />
-                    <p class="lead">
-                    Our focus is helping companies unlock the value of their
-                    data. We do this by ensuring the systems they have in place
-                    support high data <em>quality</em>, proper data <em>management</em>, and
-                    master data <em>consistency</em>. 
-                    </p>
-                    <p class="lead">
-                    We help companies design and build
-                    an environment which allows them to turn their existing data
-                    into meaningful information which supports good business decisions.
-                    We help customers mature existing data interfaces,
-                    repositories and systems. Areas of focus are those impacting
-                    data quality, data management, integration, reporting and
-                    messaging. The end goal is a more flexible and robust data
-                    and information landscape. 
-                    </p>
-                    <!--<p class="lead">
-                    Our customers are IT departments
-                    of mid to larger sized growing companies. Typically they may
-                    have used a "best of breed" approach to the software they
-                    have purchased. Having grown over time it may be that the
-                    business vision has changed and their systems are more
-                    aligned to the old vision, resulting in finding that
-                    supporting the new direction is harder than it should be.
-                    Our customers know they have a problem and they understand
-                    the value of a fresh set of eyes, unencumbered by history,
-                    politics or ego.
-					</p>-->
-					<p class="lead">
-					We are experienced in helping our customers move along a well defined path, from whatever state they are in originally to a higher performing 
-					data and integration environment which allows data to be turned into information useful in solving business problems. 
-                    </p>
-				</div>
-                </div>
-                <!-- /DATA MANAGEMENT TAB -->
                 <!-- CLOUD MIGRATION_INTEGRATION TAB-->
                 <!-- <div class="tab-pane fade" id="dropdown2">
                     <span class="text-muted">
@@ -301,19 +468,6 @@
 
                 </div> -->
                 <!-- /CLOUD MIGRATION_INTEGRATION TAB-->
-                <!-- CUSTOM DEVELOPMENT TAB -->
-                <div class="tab-pane fade" id="dropdown3">
-                    <div class="container"><p></p>
-                    <div class="jumbotron">
-                    <h1>custom development</h1>
-                  	</div>
-                    <p class="lead">
-                    yes we develop stuff and manage projects too.
-                    </p>
-</div>
-
-                </div>
-                <!-- /CUSTOM DEVELOPMENT TAB -->
                 <!-- TOOLS AND RESOURCES TAB -->
                 <!--<div class="tab-pane fade" id="toolsandresources">
                     <div class="container">
